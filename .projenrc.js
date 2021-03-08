@@ -8,6 +8,7 @@ const project = new AwsCdkConstructLibrary({
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'smtp-credentials-cdk-construct',
   repositoryUrl: 'https://github.com/me/smtp-credentials-cdk-construct.git',
+  devDeps: ['prettier@2.2.1'],
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
@@ -113,5 +114,8 @@ const project = new AwsCdkConstructLibrary({
   // projectType: ProjectType.UNKNOWN,                                         /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
 });
+
+project.compileTask.prependExec('eslint --fix src/** && eslint --fix test/**');
+project.compileTask.prependExec('prettier --write src/** && prettier --write test/**');
 
 project.synth();

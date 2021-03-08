@@ -68,6 +68,11 @@
       "type": "build"
     },
     {
+      "name": "prettier",
+      "version": "2.2.1",
+      "type": "build"
+    },
+    {
       "name": "projen",
       "version": "^0.16.36",
       "type": "build"
