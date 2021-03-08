@@ -3,9 +3,9 @@ const { AwsCdkConstructLibrary } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'Charles Salmon',
   authorAddress: 'me@charles.fish',
-  cdkVersion: '1.73.0',
+  cdkVersion: '1.92.0',
   defaultReleaseBranch: 'main',
-  jsiiFqn: "projen.AwsCdkConstructLibrary",
+  jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'smtp-credentials-cdk-construct',
   repositoryUrl: 'https://github.com/me/smtp-credentials-cdk-construct.git',
 
