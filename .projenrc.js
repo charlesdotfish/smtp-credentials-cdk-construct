@@ -116,7 +116,7 @@ const project = new AwsCdkConstructLibrary({
   // readme: undefined,                                                        /* The README setup. */
 });
 
-project.compileTask.prependExec('eslint --fix src/** && eslint --fix test/**');
-project.compileTask.prependExec('prettier --write src/** && prettier --write test/**');
+project.compileTask.prependExec('eslint --fix src/** test/** .projenrc.js');
+project.compileTask.prependExec('prettier --write src test .projenrc.js');
 
 project.synth();
