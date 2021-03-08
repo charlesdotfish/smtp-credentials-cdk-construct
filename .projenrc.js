@@ -8,6 +8,7 @@ const project = new AwsCdkConstructLibrary({
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'smtp-credentials-cdk-construct',
   repositoryUrl: 'https://github.com/me/smtp-credentials-cdk-construct.git',
+  cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-iam'],
   devDeps: ['prettier@2.2.1'],
 
   /* AwsCdkConstructLibraryOptions */

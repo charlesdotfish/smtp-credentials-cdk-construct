@@ -13,6 +13,15 @@
     "@aws-cdk/cx-api" "1.92.0"
     constructs "^3.2.0"
 
+"@aws-cdk/aws-iam@^1.92.0":
+  version "1.92.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.92.0.tgz#0bc0102e67d75e818946935cb9110ac363d35cb8"
+  integrity sha512-cO11Ikx5Sjwcn3lunlRTD90JFfz1xS5dYJGVSMmRaEKaBSWK7p3WQsnvakefuNsLPXhORKq8rnLzksaHeJHJuA==
+  dependencies:
+    "@aws-cdk/core" "1.92.0"
+    "@aws-cdk/region-info" "1.92.0"
+    constructs "^3.2.0"
+
 "@aws-cdk/cfnspec@1.92.0":
   version "1.92.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.92.0.tgz#42d6e075ca2400aa1bf7edb7c32d305dafa8614d"
@@ -40,7 +49,7 @@
     string-width "^4.2.2"
     table "^6.0.7"
 
-"@aws-cdk/core@1.92.0":
+"@aws-cdk/core@1.92.0", "@aws-cdk/core@^1.92.0":
   version "1.92.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.92.0.tgz#4de4f834bd786f05997ebd005c7b681444bb5632"
   integrity sha512-8zYkHHU2lVUjNFI0gEb1SZoRutUYeZfr9Ea2UhL+kxj4CstNUGnHanO2qC/EcXkTi6zjuD1D9NpuWNFJNaDsIA==

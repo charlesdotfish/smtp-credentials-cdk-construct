@@ -4,14 +4,23 @@
 
 Name|Description
 ----|-----------
-[Hello](#smtp-credentials-cdk-construct-hello)|*No description*
+[SmtpCredentials](#smtp-credentials-cdk-construct-smtpcredentials)|*No description*
+
+
+**Structs**
+
+Name|Description
+----|-----------
+[SmtpCredentialsProps](#smtp-credentials-cdk-construct-smtpcredentialsprops)|*No description*
 
 
 
-## class Hello  <a id="smtp-credentials-cdk-construct-hello"></a>
+## class SmtpCredentials  <a id="smtp-credentials-cdk-construct-smtpcredentials"></a>
 
 
 
+__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
+__Extends__: [Construct](#aws-cdk-core-construct)
 
 ### Initializer
 
@@ -19,25 +28,27 @@ Name|Description
 
 
 ```ts
-new Hello()
+new SmtpCredentials(scope: Construct, id: string, props: SmtpCredentialsProps)
 ```
 
+* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **id** (<code>string</code>)  *No description*
+* **props** (<code>[SmtpCredentialsProps](#smtp-credentials-cdk-construct-smtpcredentialsprops)</code>)  *No description*
+  * **emailAddress** (<code>string</code>)  *No description* 
 
 
-### Methods
 
 
-#### sayHello() <a id="smtp-credentials-cdk-construct-hello-sayhello"></a>
+## struct SmtpCredentialsProps  <a id="smtp-credentials-cdk-construct-smtpcredentialsprops"></a>
 
 
 
-```ts
-sayHello(): string
-```
 
 
-__Returns__:
-* <code>string</code>
+
+Name | Type | Description 
+-----|------|-------------
+**emailAddress** | <code>string</code> | <span></span>
 
 
 
