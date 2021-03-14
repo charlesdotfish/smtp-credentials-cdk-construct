@@ -1,17 +1,35 @@
 import * as iam from '@aws-cdk/aws-iam';
+import * as ssm from '@aws-cdk/aws-ssm';
 import * as cdk from '@aws-cdk/core';
+
+import { SmtpCredentialsProvider } from './smtp-credentials-provider';
 
 export interface SmtpCredentialsProps {
   readonly emailAddress: string;
 }
 
 export class SmtpCredentials extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: SmtpCredentialsProps) {
+  public constructor(
+    scope: cdk.Construct,
+    id: string,
+    props: SmtpCredentialsProps,
+  ) {
     super(scope, id);
 
     const { emailAddress } = props;
+
     const domainName = this.extractDomainName(emailAddress);
-    this.createIamUser(domainName, emailAddress);
+    const { userArn, userName } = this.createIamUser(domainName, emailAddress);
+    const { accessKey, smtpPassword } = this.createSmtpCredentials(
+      userArn,
+      userName,
+    );
+
+    new cdk.CfnOutput(this, 'SmtpCredentialsParameterName', {
+      value: new ssm.StringListParameter(this, 'SmtpCredentials', {
+        stringListValue: [accessKey, smtpPassword],
+      }).parameterName,
+    });
   }
 
   private extractDomainName(emailAddress: string) {
@@ -38,5 +56,26 @@ export class SmtpCredentials extends cdk.Construct {
         ],
       }),
     );
+
+    return user;
+  }
+
+  private createSmtpCredentials(userArn: string, userName: string) {
+    const { serviceToken } = new SmtpCredentialsProvider(
+      this,
+      'SmtpCredentialsProvider',
+      { userArn },
+    );
+    const credentials = new cdk.CustomResource(this, 'SmtpCredentialsLambda', {
+      serviceToken,
+      properties: {
+        UserName: userName,
+      },
+    });
+
+    return {
+      accessKey: credentials.getAttString('AccessKey'),
+      smtpPassword: credentials.getAttString('SmtpPassword'),
+    };
   }
 }
