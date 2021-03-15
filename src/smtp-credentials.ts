@@ -4,11 +4,40 @@ import * as cdk from '@aws-cdk/core';
 
 import { SmtpCredentialsProvider } from './smtp-credentials-provider';
 
+/**
+ * This struct provides the configuration required to construct an instance of @see SmtpCredentials.
+ */
 export interface SmtpCredentialsProps {
+  /**
+   * The email address that the generated SMTP credentials will permit emails to be sent from.
+   */
   readonly emailAddress: string;
 }
 
+/**
+ * This construct creates an IAM user, with a policy permitting emails to be sent via SES from
+ * a specified email address, creates an access key associated with this user, and converts the
+ * access key to SMTP credentials.
+ *
+ * The generated SMTP credentials are stored as a parameter in Parameter Store, and the name of
+ * this parameter is output as a CloudFormation output. The parameter may be safely deleted, once
+ * the credentials have been accessed.
+ *
+ * @example
+ *
+ * new SmtpCredentials(this, 'SmtpCredentials', {
+ *     emailAddress: 'me@charles.fish',
+ * });
+ */
 export class SmtpCredentials extends cdk.Construct {
+  /**
+   * @param scope A reference to the stack which this construct will be created in. Note that the
+   * SMTP credentials generated will only be permitted to send emails in this stack's region.
+   *
+   * @param id A unique identifier, within the context that this construct is created.
+   *
+   * @param props Configuration defining how this construct should be created.
+   */
   public constructor(
     scope: cdk.Construct,
     id: string,
