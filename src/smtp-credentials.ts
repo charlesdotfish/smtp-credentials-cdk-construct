@@ -26,13 +26,20 @@ export class SmtpCredentials extends cdk.Construct {
     );
 
     new cdk.CfnOutput(this, 'SmtpCredentialsParameterName', {
-      value: new ssm.StringListParameter(this, 'SmtpCredentials', {
-        stringListValue: [accessKey, smtpPassword],
+      value: new ssm.StringParameter(this, 'SmtpCredentials', {
+        stringValue: JSON.stringify({
+          AccessKey: accessKey,
+          SmtpPassword: smtpPassword,
+        }),
       }).parameterName,
     });
   }
 
   private extractDomainName(emailAddress: string) {
+    if (emailAddress.indexOf('@') === -1) {
+      throw Error('Invalid email address supplied.');
+    }
+
     return emailAddress.substring(emailAddress.lastIndexOf('@') + 1);
   }
 
