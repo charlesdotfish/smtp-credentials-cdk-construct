@@ -8,7 +8,7 @@ The generated SMTP credentials are stored as a parameter in Parameter Store, and
 
 ## Example Usage
 
-See [API.md](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/blob/main/README.md) for details on the exposed API.
+See [API.md](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/blob/main/API.md) for details on the exposed API.
 
 ```typescript
 new SmtpCredentials(this, 'SmtpCredentials', {
