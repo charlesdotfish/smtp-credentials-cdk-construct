@@ -119,7 +119,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "dotnet": {
+        "namespace": "CharlesDotFish.SmtpCredentialsCdkConstruct",
+        "packageId": "CharlesDotFish.SmtpCredentialsCdkConstruct"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
