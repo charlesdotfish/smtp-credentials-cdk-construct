@@ -10,6 +10,9 @@ const project = new AwsCdkConstructLibrary({
   authorAddress: 'me@charles.fish',
   license: 'MIT',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
+  catalog: {
+    twitter: 'charlesdotfish',
+  },
   projectType: ProjectType.LIB,
   npmAccess: NpmAccess.PUBLIC,
   defaultReleaseBranch: 'main',
