@@ -17,6 +17,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ssm',
   ],
   devDeps: ['prettier@2.2.1'],
+  license: 'MIT',
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
