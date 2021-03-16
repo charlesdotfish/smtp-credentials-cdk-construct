@@ -39,10 +39,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "prettier --write src test .projenrc.js"
-        },
-        {
-          "exec": "eslint --fix src/** test/** .projenrc.js"
+          "exec": "prettier --write src test .projenrc.js && eslint --fix src/** test/** .projenrc.js"
         },
         {
           "exec": "jsii --silence-warnings=reserved-word --no-fix-peer-dependencies"
