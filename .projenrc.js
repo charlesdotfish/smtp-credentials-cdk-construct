@@ -1,7 +1,6 @@
 const { AwsCdkConstructLibrary, ProjectType } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
-  releaseEveryCommit: false,
   name: '@charlesdotfish/smtp-credentials-cdk-construct',
   description:
     'A CDK construct that creates SMTP credentials permitting emails to be sent via SES.',
