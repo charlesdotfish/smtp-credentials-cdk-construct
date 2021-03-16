@@ -19,6 +19,7 @@ const project = new AwsCdkConstructLibrary({
   ],
   devDeps: ['prettier@2.2.1'],
   license: 'MIT',
+  releaseEveryCommit: false,
 });
 
 project.compileTask.prependExec('eslint --fix src/** test/** .projenrc.js');
