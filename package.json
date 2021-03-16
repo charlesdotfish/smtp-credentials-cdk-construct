@@ -75,7 +75,7 @@
   ],
   "main": "lib/index.js",
   "license": "MIT",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",
