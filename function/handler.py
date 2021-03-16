@@ -42,6 +42,7 @@ def on_event(event, context):
     if request_type == 'Delete':
         print('No operation required, deletion of this resource is assumed to occur in conjunction with deletion of an IAM user')
 
+# Reference: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert
 def calculate_smtp_password(secret_access_key, region):
     signature = sign(("AWS4" + secret_access_key).encode('utf-8'), DATE)
     signature = sign(signature, region)
