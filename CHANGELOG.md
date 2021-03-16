@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/compare/v1.0.2...v1.0.3) (2021-03-16)
+
+
+### Bug Fixes
+
+* correct link in `README.md` ([5f8c316](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/commit/5f8c3166d220c8af1f1760004ceeb8a85baeacaf))
+
 ### [1.0.2](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/compare/v1.0.1...v1.0.2) (2021-03-16)
 
 
