@@ -1,13 +1,14 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
+  name: '@charlesdotfish/smtp-credentials-cdk-construct',
+  description: 'A CDK construct that creates SMTP credentials permitting emails to be sent via SES.',
+  repositoryUrl: 'https://github.com/charlesdotfish/smtp-credentials-cdk-construct',
   author: 'Charles Salmon',
   authorAddress: 'me@charles.fish',
   cdkVersion: '1.93.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
-  name: 'smtp-credentials-cdk-construct',
-  repositoryUrl: 'https://github.com/me/smtp-credentials-cdk-construct.git',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-iam',

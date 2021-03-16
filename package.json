@@ -1,8 +1,9 @@
 {
-  "name": "smtp-credentials-cdk-construct",
+  "name": "@charlesdotfish/smtp-credentials-cdk-construct",
+  "description": "A CDK construct that creates SMTP credentials permitting emails to be sent via SES.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/me/smtp-credentials-cdk-construct.git"
+    "url": "https://github.com/charlesdotfish/smtp-credentials-cdk-construct"
   },
   "scripts": {
     "projen": "npx projen",
