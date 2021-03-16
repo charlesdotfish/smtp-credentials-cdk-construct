@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
   license: 'MIT',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   projectType: ProjectType.LIB,
+  npmAccess: NpmAccess.PUBLIC,
   defaultReleaseBranch: 'main',
   cdkVersion: '1.93.0',
   cdkDependencies: [
@@ -22,7 +23,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ssm',
   ],
   devDeps: ['prettier@2.2.1'],
-  npmAccess: NpmAccess.PUBLIC,
   publishToNuget: {
     dotNetNamespace: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
     packageId: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
