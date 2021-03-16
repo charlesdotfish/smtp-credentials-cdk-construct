@@ -30,6 +30,7 @@ const project = new AwsCdkConstructLibrary({
     javaPackage: 'fish.charles.cdk.smtp.credentials.construct',
     mavenGroupId: 'fish.charles.cdk-constructs',
     mavenArtifactId: 'smtp-credentials-cdk-construct',
+    mavenEndpoint: 'https://s01.oss.sonatype.org',
   },
   publishToPypi: {
     distName: 'smtp-credentials-cdk-construct',
