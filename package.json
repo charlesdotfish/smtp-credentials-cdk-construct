@@ -76,6 +76,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "version": "1.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",
