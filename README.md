@@ -1,3 +1,5 @@
+![CharlesDotFish](media/logo.png)
+
 # SMTP Credentials CDK Construct
 
 This construct creates an IAM user, with a policy permitting emails to be sent via SES from a specified email address, creates an access key associated with this user, and converts the access key to SMTP credentials.
