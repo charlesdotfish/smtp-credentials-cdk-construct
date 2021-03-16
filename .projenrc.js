@@ -1,6 +1,7 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
+  releaseEveryCommit: false,
   name: '@charlesdotfish/smtp-credentials-cdk-construct',
   description: 'A CDK construct that creates SMTP credentials permitting emails to be sent via SES.',
   repositoryUrl: 'https://github.com/charlesdotfish/smtp-credentials-cdk-construct',
@@ -19,7 +20,10 @@ const project = new AwsCdkConstructLibrary({
   ],
   devDeps: ['prettier@2.2.1'],
   license: 'MIT',
-  releaseEveryCommit: false,
+  publishToNuget: {
+    dotNetNamespace: "CharlesDotFish.SmtpCredentialsCdkConstruct",
+    packageId: "CharlesDotFish.SmtpCredentialsCdkConstruct"
+  }
 });
 
 project.compileTask.prependExec('eslint --fix src/** test/** .projenrc.js');
