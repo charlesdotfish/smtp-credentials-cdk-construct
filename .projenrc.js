@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, ProjectType } = require('projen');
+const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
   name: '@charlesdotfish/smtp-credentials-cdk-construct',
@@ -22,6 +22,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ssm',
   ],
   devDeps: ['prettier@2.2.1'],
+  npmAccess: NpmAccess.PUBLIC,
   publishToNuget: {
     dotNetNamespace: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
     packageId: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
