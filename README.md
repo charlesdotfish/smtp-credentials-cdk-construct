@@ -1,4 +1,4 @@
-![CharlesDotFish](media/logo.png)
+<p align="center"><img src="media/logo.png" alt="CharlesDotFish" width="400"></p>
 
 # SMTP Credentials CDK Construct
 
