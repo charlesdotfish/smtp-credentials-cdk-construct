@@ -27,6 +27,15 @@ const project = new AwsCdkConstructLibrary({
     dotNetNamespace: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
     packageId: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
   },
+  publishToMaven: {
+    javaPackage: 'fish.charles.cdk.smtp.credentials.construct',
+    mavenGroupId: 'fish.charles.cdk-constructs',
+    mavenArtifactId: 'smtp-credentials-cdk-construct',
+  },
+  publishToPypi: {
+    distName: 'smtp-credentials-cdk-construct',
+    module: 'smtp_credentials',
+  },
 });
 
 project.compileTask.prependExec(

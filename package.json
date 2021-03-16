@@ -120,6 +120,17 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "fish.charles.cdk.smtp.credentials.construct",
+        "maven": {
+          "groupId": "fish.charles.cdk-constructs",
+          "artifactId": "smtp-credentials-cdk-construct"
+        }
+      },
+      "python": {
+        "distName": "smtp-credentials-cdk-construct",
+        "module": "smtp_credentials"
+      },
       "dotnet": {
         "namespace": "CharlesDotFish.SmtpCredentialsCdkConstruct",
         "packageId": "CharlesDotFish.SmtpCredentialsCdkConstruct"
