@@ -24,8 +24,8 @@ const project = new AwsCdkConstructLibrary({
   devDeps: ['prettier@2.2.1'],
   npmAccess: NpmAccess.PUBLIC,
   publishToNuget: {
-    dotNetNamespace: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
-    packageId: 'CharlesDotFish.SmtpCredentialsCdkConstruct',
+    dotNetNamespace: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
+    packageId: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
   },
   publishToMaven: {
     javaPackage: 'fish.charles.cdk.smtp.credentials.construct',

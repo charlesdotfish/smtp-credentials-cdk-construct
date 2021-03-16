@@ -135,8 +135,8 @@
         "module": "smtp_credentials"
       },
       "dotnet": {
-        "namespace": "CharlesDotFish.SmtpCredentialsCdkConstruct",
-        "packageId": "CharlesDotFish.SmtpCredentialsCdkConstruct"
+        "namespace": "CharlesDotFish.CdkConstructs.SmtpCredentials",
+        "packageId": "CharlesDotFish.CdkConstructs.SmtpCredentials"
       }
     },
     "tsc": {
