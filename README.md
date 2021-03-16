@@ -1,4 +1,4 @@
-<p align="center"><img src="media/logo.png" alt="Charles Dot Fish" width="400"></p>
+<p align="center"><img src="https://github.com/charlesdotfish/smtp-credentials-cdk-construct/raw/main/media/logo.png" alt="Charles Dot Fish" width="400"></p>
 
 # SMTP Credentials CDK Construct
 
@@ -8,7 +8,7 @@ The generated SMTP credentials are stored as a parameter in Parameter Store, and
 
 ## Example Usage
 
-See [API.md](API.md) for details on the exposed API.
+See [API.md](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/blob/main/README.md) for details on the exposed API.
 
 ```typescript
 new SmtpCredentials(this, 'SmtpCredentials', {
