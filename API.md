@@ -4,18 +4,18 @@
 
 Name|Description
 ----|-----------
-[SmtpCredentials](#smtp-credentials-cdk-construct-smtpcredentials)|This construct creates an IAM user, with a policy permitting emails to be sent via SES from a specified email address, creates an access key associated with this user, and converts the access key to SMTP credentials.
+[SmtpCredentials](#charlesdotfish-smtp-credentials-cdk-construct-smtpcredentials)|This construct creates an IAM user, with a policy permitting emails to be sent via SES from a specified email address, creates an access key associated with this user, and converts the access key to SMTP credentials.
 
 
 **Structs**
 
 Name|Description
 ----|-----------
-[SmtpCredentialsProps](#smtp-credentials-cdk-construct-smtpcredentialsprops)|This struct provides the configuration required to construct an instance of @see SmtpCredentials.
+[SmtpCredentialsProps](#charlesdotfish-smtp-credentials-cdk-construct-smtpcredentialsprops)|This struct provides the configuration required to construct an instance of @see SmtpCredentials.
 
 
 
-## class SmtpCredentials  <a id="smtp-credentials-cdk-construct-smtpcredentials"></a>
+## class SmtpCredentials  <a id="charlesdotfish-smtp-credentials-cdk-construct-smtpcredentials"></a>
 
 This construct creates an IAM user, with a policy permitting emails to be sent via SES from a specified email address, creates an access key associated with this user, and converts the access key to SMTP credentials.
 
@@ -37,13 +37,13 @@ new SmtpCredentials(scope: Construct, id: string, props: SmtpCredentialsProps)
 
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  A reference to the stack which this construct will be created in.
 * **id** (<code>string</code>)  A unique identifier, within the context that this construct is created.
-* **props** (<code>[SmtpCredentialsProps](#smtp-credentials-cdk-construct-smtpcredentialsprops)</code>)  Configuration defining how this construct should be created.
+* **props** (<code>[SmtpCredentialsProps](#charlesdotfish-smtp-credentials-cdk-construct-smtpcredentialsprops)</code>)  Configuration defining how this construct should be created.
   * **emailAddress** (<code>string</code>)  The email address that the generated SMTP credentials will permit emails to be sent from. 
 
 
 
 
-## struct SmtpCredentialsProps  <a id="smtp-credentials-cdk-construct-smtpcredentialsprops"></a>
+## struct SmtpCredentialsProps  <a id="charlesdotfish-smtp-credentials-cdk-construct-smtpcredentialsprops"></a>
 
 
 This struct provides the configuration required to construct an instance of @see SmtpCredentials.
