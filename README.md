@@ -46,7 +46,7 @@ See more details at pypi.org: https://pypi.org/project/smtp-credentials-cdk-cons
 </dependency>
 ```
 
-This package has not yet been indexed into the Maven Central repository. In the interim, you will find more details here: https://s01.oss.sonatype.org/#nexus-search;quick~smtp-credentials-cdk-construct
+See more details at maven.org: https://search.maven.org/artifact/fish.charles.cdk-constructs/smtp-credentials-cdk-construct
 
 ## Example Usage
 
