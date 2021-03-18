@@ -5,7 +5,7 @@
 [![Release Pipeline](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/actions/workflows/release.yml?branch=main)
 [![Code Coverage](https://codecov.io/gh/charlesdotfish/smtp-credentials-cdk-construct/branch/main/graph/badge.svg?token=3NXG4QMJRM)](https://codecov.io/gh/charlesdotfish/smtp-credentials-cdk-construct)
 [![GitHub Issues](https://img.shields.io/github/issues/charlesdotfish/smtp-credentials-cdk-construct.svg)](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/issues/)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/charlesdotfish/smtp-credentials-cdk-construct.svg)](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/pull/)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/charlesdotfish/smtp-credentials-cdk-construct.svg)](https://github.com/charlesdotfish/smtp-credentials-cdk-construct/pulls/)
 
 This construct creates an IAM user, with a policy permitting emails to be sent via SES from a specified email address, creates an access key associated with this user, and converts the access key to SMTP credentials.
 
