@@ -26,6 +26,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ssm',
   ],
   devDeps: ['prettier@2.2.1'],
+  codeCov: true,
   publishToNuget: {
     dotNetNamespace: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
     packageId: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
