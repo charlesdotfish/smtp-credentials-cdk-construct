@@ -16,7 +16,7 @@ const project = new AwsCdkConstructLibrary({
   projectType: ProjectType.LIB,
   npmAccess: NpmAccess.PUBLIC,
   defaultReleaseBranch: 'main',
-  cdkVersion: '1.93.0',
+  cdkVersion: '1.94.1',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-iam',
