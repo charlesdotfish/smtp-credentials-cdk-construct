@@ -4,6 +4,12 @@ const project = new AwsCdkConstructLibrary({
   name: '@charlesdotfish/smtp-credentials-cdk-construct',
   description:
     'A CDK construct that creates SMTP credentials permitting emails to be sent via SES.',
+  keywords: [
+    'aws',
+    'cdk',
+    'constructs',
+    'smtp credentials',
+  ],
   repositoryUrl:
     'https://github.com/charlesdotfish/smtp-credentials-cdk-construct',
   author: 'Charles Salmon',

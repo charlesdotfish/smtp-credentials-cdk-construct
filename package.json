@@ -71,7 +71,10 @@
   },
   "bundledDependencies": [],
   "keywords": [
-    "cdk"
+    "aws",
+    "cdk",
+    "constructs",
+    "smtp credentials"
   ],
   "main": "lib/index.js",
   "license": "MIT",
