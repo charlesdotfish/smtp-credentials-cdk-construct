@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/charlesdotfish/smtp-credentials-cdk-construct/raw/main/media/logo.png" alt="Charles Dot Fish" width="400"></p>
+<p align="center"><a href="https://github.com/charlesdotfish"><img src="https://github.com/charlesdotfish/smtp-credentials-cdk-construct/raw/main/media/logo.png" alt="Charles Dot Fish" width="400"></a></p>
 
 # SMTP Credentials CDK Construct
 
