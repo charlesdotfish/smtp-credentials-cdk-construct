@@ -880,7 +880,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.26.0", "@jsii/spec@^1.30.0":
+"@jsii/spec@^1.30.0":
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.30.0.tgz#e5b2381b2be0b9c0839190f9f45d0a038654c73d"
   integrity sha512-oXIwvZyHHc/TrwA/3pzQ3gkqBe916EWBvaexNI3rnKZujlHZT4vVVHMCjQ/kUJhcR0GEaahvwlNhiPTu6roC2g==
@@ -1724,10 +1724,10 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
 
-codemaker@^1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.26.0.tgz#31560f44d597afbb366c015267327394e18efbdf"
-  integrity sha512-oK0SdWi3CUHL7hVcDpXVBQc2xm31RCJSqg7I1wviMifD89zbvu3boAz/s5aoXbcVDKKxLOZn2w55WlGCih9HOw==
+codemaker@^1.30.0:
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/codemaker/-/codemaker-1.30.0.tgz#c718a5178e5bdd06d6ab2ddb629edc64de80cb51"
+  integrity sha512-yntR55JhhVlZTfR4CPV6IrCULovPDrk3z0yQR7/ygEtNxEOQrHhX17djJ0rVmIwCJUawv+ODTJ1ipJY9CbxJQw==
   dependencies:
     camelcase "^6.2.0"
     decamelize "^5.0.0"
@@ -4055,24 +4055,24 @@ jsii-docgen@^1.8.66:
     yargs "^16.2.0"
 
 jsii-pacmak@^1.24.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.26.0.tgz#c600cb190255e080944c906d885e9b436edd2cd9"
-  integrity sha512-KOKOIazxddh8CuyuLMoBURW2bj3prhzyT0qF5ojUhHrbZeuH3eulF/Sn5PaIAadmQdmCiu69DYJe2JIwY/zwjw==
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.30.0.tgz#a6a7570da1388027ce4e5ca1603d4144f341d307"
+  integrity sha512-hYvISYBXZ5WL/+LtG3HpVrimguqAoWa3D8jaqsnoiIGrdmaxKCZ0VnioJYxEX7wVamYuCwXu5NFx/b31BspU6A==
   dependencies:
-    "@jsii/spec" "^1.26.0"
+    "@jsii/spec" "^1.30.0"
     clone "^2.1.2"
-    codemaker "^1.26.0"
+    codemaker "^1.30.0"
     commonmark "^0.29.3"
     escape-string-regexp "^4.0.0"
     fs-extra "^9.1.0"
-    jsii-reflect "^1.26.0"
-    jsii-rosetta "^1.26.0"
-    semver "^7.3.4"
+    jsii-reflect "^1.30.0"
+    jsii-rosetta "^1.30.0"
+    semver "^7.3.5"
     spdx-license-list "^6.4.0"
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.26.0, jsii-reflect@^1.30.0:
+jsii-reflect@^1.30.0:
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.30.0.tgz#b079d448ed35c9d9dfea8798a8ef39487ed0c86c"
   integrity sha512-t/1Zr1gGqQSYt94Lfq860VLnCr8y8MLvlLorWYqmBeWKCaSPhtYSC1blGhZhDrAW+CBXiT0Oy64j4Q++AntRmw==
@@ -4083,16 +4083,16 @@ jsii-reflect@^1.26.0, jsii-reflect@^1.30.0:
     oo-ascii-tree "^1.30.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.26.0.tgz#f2107981b769f10f0b2ebf497702c3e6d9d3a2c1"
-  integrity sha512-J/VQR8j/mD4Q5qGF0JmfvOJeNWIx0I158nvo6FsnC8aYmHyIpBPmlpKWZzUGC8fHxoD3mC8oeiFLp2Yv8BNtvQ==
+jsii-rosetta@^1.30.0:
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.30.0.tgz#5c974eefef9a8e5e1b8364e53e6856f07c7eaf68"
+  integrity sha512-ChFg5qhvxCaM2bspCqizs48yMtsm5YLHjBoNZLCkbXyc3yMM5l8pnn787B5ww5TI3+tKxKYWkbiKf356kQ1OgQ==
   dependencies:
-    "@jsii/spec" "^1.26.0"
+    "@jsii/spec" "^1.30.0"
     commonmark "^0.29.3"
     fs-extra "^9.1.0"
     typescript "~3.9.9"
-    xmldom "^0.5.0"
+    xmldom "^0.6.0"
     yargs "^16.2.0"
 
 jsii@^1.24.0:
@@ -6389,10 +6389,10 @@ xmlchars@^2.2.0:
   resolved "https://registry.yarnpkg.com/xmlchars/-/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
 
-xmldom@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.5.0.tgz#193cb96b84aa3486127ea6272c4596354cb4962e"
-  integrity sha512-Foaj5FXVzgn7xFzsKeNIde9g6aFBxTPi37iwsno8QvApmtg7KYrr+OPyRHcJF7dud2a5nGRBXK3n0dL62Gf7PA==
+xmldom@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.6.0.tgz#43a96ecb8beece991cef382c08397d82d4d0c46f"
+  integrity sha512-iAcin401y58LckRZ0TkI4k0VSM1Qg0KGSc3i8rU+xrxe19A/BN1zHyVSJY7uoutVlaTSzYyk/v5AmkewAP7jtg==
 
 xtend@~4.0.1:
   version "4.0.2"
