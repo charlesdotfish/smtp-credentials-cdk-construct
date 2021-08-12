@@ -143,13 +143,22 @@
     "@aws-cdk/core" "1.111.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-iam@1.111.0", "@aws-cdk/aws-iam@^1.111.0":
+"@aws-cdk/aws-iam@1.111.0":
   version "1.111.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.111.0.tgz#410c33e255a0c4d1d13f253e47458c58e96f40ed"
   integrity sha512-ha0Lv0iudBeuzOlBP5eadoaVf4fASyLDmcBg99f7gHImITaS2T5JqEFY4YRUYjwoJtAUkHTVIcMF2KanWORaIw==
   dependencies:
     "@aws-cdk/core" "1.111.0"
     "@aws-cdk/region-info" "1.111.0"
+    constructs "^3.3.69"
+
+"@aws-cdk/aws-iam@^1.111.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.118.0.tgz#ae2064bd4bcc97b498130238178a11be8fb9fd4e"
+  integrity sha512-1AhnGWclYnZmuO/A5EY37atd/xYssC0EB/wzxQz/nwsSoKIKguTmNoK7ZWY/b2UJyqWFSSQII7DCVDT3P583jQ==
+  dependencies:
+    "@aws-cdk/core" "1.118.0"
+    "@aws-cdk/region-info" "1.118.0"
     constructs "^3.3.69"
 
 "@aws-cdk/aws-kms@1.111.0":
@@ -282,6 +291,14 @@
     jsonschema "^1.4.0"
     semver "^7.3.5"
 
+"@aws-cdk/cloud-assembly-schema@1.118.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-1.118.0.tgz#768fe56a61daace0d360cc548993016f21492b7c"
+  integrity sha512-Bmxftbl/SScafJJio2+hQiNdPqvydouzqGtW9xdtL0/T8m5pi7nmV4PG+wCafPGEJA66A56b5CGk/svL/CSj4g==
+  dependencies:
+    jsonschema "^1.4.0"
+    semver "^7.3.5"
+
 "@aws-cdk/cloudformation-diff@1.111.0":
   version "1.111.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cloudformation-diff/-/cloudformation-diff-1.111.0.tgz#7ee0f674695ad7044e0e03514a0f5ecb75397118"
@@ -295,7 +312,7 @@
     string-width "^4.2.2"
     table "^6.7.1"
 
-"@aws-cdk/core@1.111.0", "@aws-cdk/core@^1.111.0":
+"@aws-cdk/core@1.111.0":
   version "1.111.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.111.0.tgz#76795bf6d8369bf2cc98ca99932dc1f2e992ba0c"
   integrity sha512-ptI43hFZ6yClzyBbCQh1LZgy3b8Z0ekkb6XYCf1BtmqmimvQJOyBc68nfn+NaO2uGDRMor2XhkN9qIRpInSR4w==
@@ -303,6 +320,20 @@
     "@aws-cdk/cloud-assembly-schema" "1.111.0"
     "@aws-cdk/cx-api" "1.111.0"
     "@aws-cdk/region-info" "1.111.0"
+    "@balena/dockerignore" "^1.0.2"
+    constructs "^3.3.69"
+    fs-extra "^9.1.0"
+    ignore "^5.1.8"
+    minimatch "^3.0.4"
+
+"@aws-cdk/core@1.118.0", "@aws-cdk/core@^1.111.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.118.0.tgz#e3e66b67f6b3ccdc806f23c0135d7060f79a393a"
+  integrity sha512-AYUMUn2S05YrbpBkd7YfwzAT0zCAUdLFq1KUpg9y/pWpqGX883/JSQmT6ygoXxE5gVCaziUxpFxToFWE96SE/g==
+  dependencies:
+    "@aws-cdk/cloud-assembly-schema" "1.118.0"
+    "@aws-cdk/cx-api" "1.118.0"
+    "@aws-cdk/region-info" "1.118.0"
     "@balena/dockerignore" "^1.0.2"
     constructs "^3.3.69"
     fs-extra "^9.1.0"
@@ -331,10 +362,23 @@
     "@aws-cdk/cloud-assembly-schema" "1.111.0"
     semver "^7.3.5"
 
+"@aws-cdk/cx-api@1.118.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cx-api/-/cx-api-1.118.0.tgz#918eaa70cd9c013774aee5616b2b5b79c037b2a4"
+  integrity sha512-pNeuxHPmJjUvLIr89J4uMt8c2JkiuclgZ1JBilot+dFD8GAb0RhxhtfSnA3scOB/Lnnd0Qf4UQhKsd5vqEdqAA==
+  dependencies:
+    "@aws-cdk/cloud-assembly-schema" "1.118.0"
+    semver "^7.3.5"
+
 "@aws-cdk/region-info@1.111.0":
   version "1.111.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/region-info/-/region-info-1.111.0.tgz#26bb113d547629406ca2b1f588b1ed4656df7fcb"
   integrity sha512-xUqNPkg5cEV/df1aSle2cc+yasgyOtFPMXw53PYMTArwfmHMsXb5Lna0lsFddMx4heO+be5XYUrWVijIiPHMIQ==
+
+"@aws-cdk/region-info@1.118.0":
+  version "1.118.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/region-info/-/region-info-1.118.0.tgz#a6e127c3723a7edea85c3df0031a06d132b870e0"
+  integrity sha512-7hudA/zfCsDw0DIDu/Cc4+UJjW6aC0y4Mp7AmxlxkziXIEZi3KvSXwR2IBmKV+pSWMvMZYTiPJIgLLqB+moFgQ==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
