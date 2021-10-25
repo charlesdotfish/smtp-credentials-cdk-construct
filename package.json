@@ -8,21 +8,28 @@
   "scripts": {
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
-    "test:compile": "npx projen test:compile",
     "test": "npx projen test",
     "build": "npx projen build",
-    "bump": "npx projen bump",
-    "release": "npx projen release",
     "test:watch": "npx projen test:watch",
     "test:update": "npx projen test:update",
-    "projen:upgrade": "npx projen projen:upgrade",
+    "bump": "npx projen bump",
+    "unbump": "npx projen unbump",
+    "publish:github": "npx projen publish:github",
+    "default": "npx projen default",
     "watch": "npx projen watch",
     "package": "npx projen package",
     "eslint": "npx projen eslint",
     "compat": "npx projen compat",
+    "publish:npm": "npx projen publish:npm",
+    "publish:maven": "npx projen publish:maven",
+    "publish:pypi": "npx projen publish:pypi",
+    "publish:nuget": "npx projen publish:nuget",
     "docgen": "npx projen docgen",
-    "projen": "npx projen",
-    "start": "npx projen start"
+    "release": "npx projen release",
+    "publish:git": "npx projen publish:git",
+    "upgrade": "npx projen upgrade",
+    "upgrade-projen": "npx projen upgrade-projen",
+    "projen": "npx projen"
   },
   "author": {
     "name": "Charles Salmon",
@@ -30,44 +37,45 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.111.0",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^10.17.0",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
-    "eslint": "^7.21.0",
-    "eslint-import-resolver-node": "^0.3.4",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.22.1",
+    "@aws-cdk/assert": "^1.129.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^14.17.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
     "jest": "^26.6.3",
     "jest-junit": "^12",
-    "jsii": "^1.24.0",
-    "jsii-diff": "^1.24.0",
-    "jsii-docgen": "^1.8.66",
-    "jsii-pacmak": "^1.24.0",
+    "jsii": "^1.40.0",
+    "jsii-diff": "^1.40.0",
+    "jsii-docgen": "^1.8.110",
+    "jsii-pacmak": "^1.40.0",
     "json-schema": "^0.3.0",
+    "npm-check-updates": "^11",
     "prettier": "2.2.1",
-    "projen": "^0.17.32",
+    "projen": "^0.31.11",
     "standard-version": "^9",
-    "ts-jest": "^26.5.3",
-    "typescript": "^4.2.3"
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-iam": "^1.111.0",
-    "@aws-cdk/aws-lambda": "^1.111.0",
-    "@aws-cdk/aws-logs": "^1.111.0",
-    "@aws-cdk/aws-ssm": "^1.111.0",
-    "@aws-cdk/core": "^1.111.0",
-    "@aws-cdk/custom-resources": "^1.111.0",
+    "@aws-cdk/aws-iam": "^1.129.0",
+    "@aws-cdk/aws-lambda": "^1.129.0",
+    "@aws-cdk/aws-logs": "^1.129.0",
+    "@aws-cdk/aws-ssm": "^1.129.0",
+    "@aws-cdk/core": "^1.129.0",
+    "@aws-cdk/custom-resources": "^1.129.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-iam": "^1.111.0",
-    "@aws-cdk/aws-lambda": "^1.111.0",
-    "@aws-cdk/aws-logs": "^1.111.0",
-    "@aws-cdk/aws-ssm": "^1.111.0",
-    "@aws-cdk/core": "^1.111.0",
-    "@aws-cdk/custom-resources": "^1.111.0"
+    "@aws-cdk/aws-iam": "^1.129.0",
+    "@aws-cdk/aws-lambda": "^1.129.0",
+    "@aws-cdk/aws-logs": "^1.129.0",
+    "@aws-cdk/aws-ssm": "^1.129.0",
+    "@aws-cdk/core": "^1.129.0",
+    "@aws-cdk/custom-resources": "^1.129.0"
   },
   "bundledDependencies": [],
   "keywords": [
@@ -78,10 +86,10 @@
   ],
   "main": "lib/index.js",
   "license": "MIT",
-  "version": "1.0.14",
   "publishConfig": {
     "access": "public"
   },
+  "version": "0.0.0",
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",
@@ -117,7 +125,7 @@
     "preset": "ts-jest",
     "globals": {
       "ts-jest": {
-        "tsconfig": "tsconfig.jest.json"
+        "tsconfig": "tsconfig.dev.json"
       }
     }
   },
