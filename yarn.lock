@@ -1132,10 +1132,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.60.tgz#35f3d6213daed95da7f0f73e75bcc6980e90597b"
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
 
-"@types/node@^14.17.0":
-  version "14.17.29"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.29.tgz#44a774fa2858efa4d039dd9051b51160e8295c70"
-  integrity sha512-sd4CHI9eTJXTH2vF3RGtGkqvWRwhsSSUFsXD4oG38GZzSZ0tNPbWikd2AbOAcKxCXhOg57fL8FPxjpfSzb2pIQ==
+"@types/node@^12.20.34":
+  version "12.20.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.34.tgz#49b5250893d3a6186dd0f965723b7a2f216c3da8"
+  integrity sha512-+G6kIkmDOyWs7Co8M48lgyauuOlgZeRib64/DFBwYlY6ngwT7wgcF7ga1DsmZImUDfm2rE1jMnUhIEC/gdJ5rw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2693,6 +2693,11 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
+
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz#4048b958395da89668252001dbd9eca6b83bacbd"
@@ -2739,6 +2744,13 @@ eslint-plugin-import@^2.25.2:
     object.values "^1.1.5"
     resolve "^1.20.0"
     tsconfig-paths "^3.11.0"
+
+eslint-plugin-prettier@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-4.0.0.tgz#8b99d1e4b8b24a762472b4567992023619cb98e0"
+  integrity sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 eslint-scope@^5.1.1:
   version "5.1.1"
@@ -2972,6 +2984,11 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
+
+fast-diff@^1.1.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
+  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
 fast-glob@^3.1.1:
   version "3.2.7"
@@ -5812,10 +5829,17 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
+  dependencies:
+    fast-diff "^1.1.2"
+
+prettier@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
+  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"

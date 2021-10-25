@@ -1,52 +1,50 @@
-const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
+const { AwsCdkConstructLibrary, NpmAccess } = require("projen");
+const { ReleaseTrigger } = require("projen/lib/release");
 
 const project = new AwsCdkConstructLibrary({
-  name: '@charlesdotfish/smtp-credentials-cdk-construct',
+  name: "@charlesdotfish/smtp-credentials-cdk-construct",
   description:
-    'A CDK construct that creates SMTP credentials permitting emails to be sent via SES.',
-  keywords: ['aws', 'cdk', 'constructs', 'smtp credentials'],
+    "A CDK construct that creates SMTP credentials permitting emails to be sent via SES.",
+  keywords: ["aws", "cdk", "constructs", "smtp credentials"],
   repositoryUrl:
-    'https://github.com/charlesdotfish/smtp-credentials-cdk-construct',
-  author: 'Charles Salmon',
-  authorAddress: 'me@charles.fish',
-  license: 'MIT',
-  jsiiFqn: 'projen.AwsCdkConstructLibrary',
+    "https://github.com/charlesdotfish/smtp-credentials-cdk-construct",
+  author: "Charles Salmon",
+  authorAddress: "me@charles.fish",
+  license: "MIT",
   catalog: {
-    twitter: 'charlesdotfish',
+    twitter: "charlesdotfish",
   },
-  projectType: ProjectType.LIB,
   npmAccess: NpmAccess.PUBLIC,
-  defaultReleaseBranch: 'main',
-  releaseEveryCommit: false,
-  cdkVersion: '1.129.0',
+  minNodeVersion: "12.20.34",
+  defaultReleaseBranch: "main",
+  releaseTrigger: ReleaseTrigger.continuous(),
+  cdkVersion: "1.129.0",
   cdkDependencies: [
-    '@aws-cdk/core',
-    '@aws-cdk/aws-iam',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-logs',
-    '@aws-cdk/custom-resources',
-    '@aws-cdk/aws-ssm',
+    "@aws-cdk/core",
+    "@aws-cdk/aws-iam",
+    "@aws-cdk/aws-lambda",
+    "@aws-cdk/aws-logs",
+    "@aws-cdk/custom-resources",
+    "@aws-cdk/aws-ssm",
   ],
-  devDeps: ['prettier@2.2.1'],
+  eslintOptions: {
+    prettier: true,
+  },
   codeCov: true,
   publishToNuget: {
-    dotNetNamespace: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
-    packageId: 'CharlesDotFish.CdkConstructs.SmtpCredentials',
+    dotNetNamespace: "CharlesDotFish.CdkConstructs.SmtpCredentials",
+    packageId: "CharlesDotFish.CdkConstructs.SmtpCredentials",
   },
   publishToMaven: {
-    javaPackage: 'fish.charles.cdk.smtp.credentials.construct',
-    mavenGroupId: 'fish.charles.cdk-constructs',
-    mavenArtifactId: 'smtp-credentials-cdk-construct',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
+    javaPackage: "fish.charles.cdk.smtp.credentials.construct",
+    mavenGroupId: "fish.charles.cdk-constructs",
+    mavenArtifactId: "smtp-credentials-cdk-construct",
+    mavenEndpoint: "https://s01.oss.sonatype.org",
   },
   publishToPypi: {
-    distName: 'smtp-credentials-cdk-construct',
-    module: 'smtp_credentials',
+    distName: "smtp-credentials-cdk-construct",
+    module: "smtp_credentials",
   },
 });
-
-project.compileTask.prependExec(
-  'prettier --write src test .projenrc.js && eslint --fix src/** test/** .projenrc.js',
-);
 
 project.synth();

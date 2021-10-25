@@ -1,8 +1,8 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as ssm from '@aws-cdk/aws-ssm';
-import * as cdk from '@aws-cdk/core';
+import * as iam from "@aws-cdk/aws-iam";
+import * as ssm from "@aws-cdk/aws-ssm";
+import * as cdk from "@aws-cdk/core";
 
-import { SmtpCredentialsProvider } from './smtp-credentials-provider';
+import { SmtpCredentialsProvider } from "./smtp-credentials-provider";
 
 /**
  * This struct provides the configuration required to construct an instance of @see SmtpCredentials.
@@ -41,7 +41,7 @@ export class SmtpCredentials extends cdk.Construct {
   public constructor(
     scope: cdk.Construct,
     id: string,
-    props: SmtpCredentialsProps,
+    props: SmtpCredentialsProps
   ) {
     super(scope, id);
 
@@ -51,11 +51,11 @@ export class SmtpCredentials extends cdk.Construct {
     const { userArn, userName } = this.createIamUser(domainName, emailAddress);
     const { accessKey, smtpPassword } = this.createSmtpCredentials(
       userArn,
-      userName,
+      userName
     );
 
-    new cdk.CfnOutput(this, 'SmtpCredentialsParameterName', {
-      value: new ssm.StringParameter(this, 'SmtpCredentials', {
+    new cdk.CfnOutput(this, "SmtpCredentialsParameterName", {
+      value: new ssm.StringParameter(this, "SmtpCredentials", {
         stringValue: JSON.stringify({
           AccessKey: accessKey,
           SmtpPassword: smtpPassword,
@@ -65,32 +65,32 @@ export class SmtpCredentials extends cdk.Construct {
   }
 
   private extractDomainName(emailAddress: string) {
-    if (emailAddress.indexOf('@') === -1) {
-      throw Error('Invalid email address supplied.');
+    if (emailAddress.indexOf("@") === -1) {
+      throw Error("Invalid email address supplied.");
     }
 
-    return emailAddress.substring(emailAddress.lastIndexOf('@') + 1);
+    return emailAddress.substring(emailAddress.lastIndexOf("@") + 1);
   }
 
   private createIamUser(domainName: string, emailAddress: string) {
-    const user = new iam.User(this, 'SmtpUser');
+    const user = new iam.User(this, "SmtpUser");
     user.attachInlinePolicy(
-      new iam.Policy(this, 'SmtpPolicy', {
+      new iam.Policy(this, "SmtpPolicy", {
         statements: [
           new iam.PolicyStatement({
             effect: iam.Effect.ALLOW,
-            actions: ['ses:SendRawEmail'],
+            actions: ["ses:SendRawEmail"],
             resources: [
               `arn:aws:ses:${process.env.CDK_DEFAULT_REGION}:${process.env.CDK_DEFAULT_ACCOUNT}:identity/${domainName}`,
             ],
             conditions: {
               StringEquals: {
-                'ses:FromAddress': emailAddress,
+                "ses:FromAddress": emailAddress,
               },
             },
           }),
         ],
-      }),
+      })
     );
 
     return user;
@@ -99,10 +99,10 @@ export class SmtpCredentials extends cdk.Construct {
   private createSmtpCredentials(userArn: string, userName: string) {
     const { serviceToken } = new SmtpCredentialsProvider(
       this,
-      'SmtpCredentialsProvider',
-      { userArn },
+      "SmtpCredentialsProvider",
+      { userArn }
     );
-    const credentials = new cdk.CustomResource(this, 'SmtpCredentialsLambda', {
+    const credentials = new cdk.CustomResource(this, "SmtpCredentialsLambda", {
       serviceToken,
       properties: {
         UserName: userName,
@@ -110,8 +110,8 @@ export class SmtpCredentials extends cdk.Construct {
     });
 
     return {
-      accessKey: credentials.getAttString('AccessKey'),
-      smtpPassword: credentials.getAttString('SmtpPassword'),
+      accessKey: credentials.getAttString("AccessKey"),
+      smtpPassword: credentials.getAttString("SmtpPassword"),
     };
   }
 }

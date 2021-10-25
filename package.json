@@ -26,7 +26,6 @@
     "publish:nuget": "npx projen publish:nuget",
     "docgen": "npx projen docgen",
     "release": "npx projen release",
-    "publish:git": "npx projen publish:git",
     "upgrade": "npx projen upgrade",
     "upgrade-projen": "npx projen upgrade-projen",
     "projen": "npx projen"
@@ -39,13 +38,15 @@
   "devDependencies": {
     "@aws-cdk/assert": "^1.129.0",
     "@types/jest": "^26.0.24",
-    "@types/node": "^14.17.0",
+    "@types/node": "^12.20.34",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^26.6.3",
     "jest-junit": "^12",
     "jsii": "^1.40.0",
@@ -54,7 +55,7 @@
     "jsii-pacmak": "^1.40.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "prettier": "2.2.1",
+    "prettier": "2.4.1",
     "projen": "^0.31.11",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
@@ -84,6 +85,9 @@
     "constructs",
     "smtp credentials"
   ],
+  "engines": {
+    "node": ">= 12.20.34"
+  },
   "main": "lib/index.js",
   "license": "MIT",
   "publishConfig": {
