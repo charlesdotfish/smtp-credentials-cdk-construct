@@ -27,6 +27,10 @@
       "type": "build"
     },
     {
+      "name": "eslint-config-prettier",
+      "type": "build"
+    },
+    {
       "name": "eslint-import-resolver-node",
       "type": "build"
     },
@@ -36,6 +40,10 @@
     },
     {
       "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-prettier",
       "type": "build"
     },
     {
@@ -69,12 +77,16 @@
     },
     {
       "name": "prettier",
+      "type": "build"
+    },
+    {
+      "name": "prettier",
       "version": "2.2.1",
       "type": "build"
     },
     {
       "name": "projen",
-      "version": "^0.17.32",
+      "version": "^0.17.78",
       "type": "build"
     },
     {

@@ -1,1 +1,1 @@
-export * from './smtp-credentials';
+export * from "./smtp-credentials";
