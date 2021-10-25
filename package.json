@@ -8,7 +8,6 @@
   "scripts": {
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
-    "test:compile": "npx projen test:compile",
     "test": "npx projen test",
     "build": "npx projen build",
     "test:watch": "npx projen test:watch",
@@ -58,7 +57,7 @@
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
     "prettier": "2.2.1",
-    "projen": "0.30.0",
+    "projen": "^0.31.11",
     "standard-version": "^9",
     "ts-jest": "^26.5.3",
     "typescript": "^4.2.3"
