@@ -15,7 +15,7 @@ const project = new AwsCdkConstructLibrary({
     twitter: "charlesdotfish",
   },
   npmAccess: NpmAccess.PUBLIC,
-  minNodeVersion: "12.20.34",
+  minNodeVersion: "12.7.0",
   defaultReleaseBranch: "main",
   releaseTrigger: ReleaseTrigger.continuous(),
   cdkVersion: "1.129.0",
