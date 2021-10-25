@@ -25,7 +25,6 @@ const project = new AwsCdkConstructLibrary({
     "@aws-cdk/custom-resources",
     "@aws-cdk/aws-ssm",
   ],
-  devDeps: ["prettier@2.2.1"],
   eslintOptions: {
     prettier: true,
   },

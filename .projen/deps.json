@@ -81,22 +81,12 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^11",
-      "type": "build"
-    },
-    {
       "name": "prettier",
-      "type": "build"
-    },
-    {
-      "name": "prettier",
-      "version": "2.2.1",
       "type": "build"
     },
     {
       "name": "projen",
-      "version": "^0.22.0",
+      "version": "^0.23.0",
       "type": "build"
     },
     {
