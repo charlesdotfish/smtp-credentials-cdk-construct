@@ -10,7 +10,6 @@ const project = new AwsCdkConstructLibrary({
   author: 'Charles Salmon',
   authorAddress: 'me@charles.fish',
   license: 'MIT',
-  jsiiFqn: 'projen.AwsCdkConstructLibrary',
   catalog: {
     twitter: 'charlesdotfish',
   },
