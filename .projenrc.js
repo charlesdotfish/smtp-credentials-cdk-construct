@@ -1,4 +1,5 @@
 const { AwsCdkConstructLibrary, NpmAccess } = require("projen");
+const { ReleaseTrigger } = require("projen/lib/release");
 
 const project = new AwsCdkConstructLibrary({
   name: "@charlesdotfish/smtp-credentials-cdk-construct",
@@ -16,7 +17,7 @@ const project = new AwsCdkConstructLibrary({
   npmAccess: NpmAccess.PUBLIC,
   minNodeVersion: "12.20.34",
   defaultReleaseBranch: "main",
-  releaseEveryCommit: false,
+  releaseTrigger: ReleaseTrigger.continuous(),
   cdkVersion: "1.129.0",
   cdkDependencies: [
     "@aws-cdk/core",
