@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
+const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
   name: '@charlesdotfish/smtp-credentials-cdk-construct',
@@ -14,7 +14,6 @@ const project = new AwsCdkConstructLibrary({
   catalog: {
     twitter: 'charlesdotfish',
   },
-  projectType: ProjectType.LIB,
   npmAccess: NpmAccess.PUBLIC,
   defaultReleaseBranch: 'main',
   releaseEveryCommit: false,
