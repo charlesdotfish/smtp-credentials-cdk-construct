@@ -23,8 +23,8 @@ The generated SMTP credentials are stored as a parameter in Parameter Store, and
 this parameter is output as a CloudFormation output. The parameter may be safely deleted, once
 the credentials have been accessed.
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
+__Extends__: [Construct](#constructs-construct)
 
 ### Initializer
 
@@ -35,7 +35,7 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 new SmtpCredentials(scope: Construct, id: string, props: SmtpCredentialsProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  A reference to the stack which this construct will be created in.
+* **scope** (<code>[Construct](#constructs-construct)</code>)  A reference to the stack which this construct will be created in.
 * **id** (<code>string</code>)  A unique identifier, within the context that this construct is created.
 * **props** (<code>[SmtpCredentialsProps](#charlesdotfish-smtp-credentials-cdk-construct-smtpcredentialsprops)</code>)  Configuration defining how this construct should be created.
   * **emailAddress** (<code>string</code>)  The email address that the generated SMTP credentials will permit emails to be sent from. 

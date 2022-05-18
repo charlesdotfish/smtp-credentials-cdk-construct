@@ -1,11 +1,5 @@
-import {
-  arrayWith,
-  expect as expectCDK,
-  haveResource,
-  haveResourceLike,
-  stringLike,
-} from "@aws-cdk/assert";
-import * as cdk from "@aws-cdk/core";
+import { Stack } from "aws-cdk-lib";
+import { Template, Match } from "aws-cdk-lib/assertions";
 
 import { SmtpCredentials } from "../src";
 
@@ -16,7 +10,7 @@ describe("SmtpCredentials", () => {
 
   test("creates an IAM user", () => {
     // Arrange
-    const stack = new cdk.Stack();
+    const stack = new Stack();
 
     // Act
     new SmtpCredentials(stack, "SmtpCredentials", {
@@ -24,12 +18,12 @@ describe("SmtpCredentials", () => {
     });
 
     // Assert
-    expectCDK(stack).to(haveResource("AWS::IAM::User"));
+    Template.fromStack(stack).hasResourceProperties("AWS::IAM::User", {});
   });
 
   test("creates an IAM policy with permissions to send email", () => {
     // Arrange
-    const stack = new cdk.Stack();
+    const stack = new Stack();
 
     // Act
     new SmtpCredentials(stack, "SmtpCredentials", {
@@ -37,29 +31,27 @@ describe("SmtpCredentials", () => {
     });
 
     // Assert
-    expectCDK(stack).to(
-      haveResourceLike("AWS::IAM::Policy", {
-        PolicyDocument: {
-          Statement: [
-            {
-              Action: "ses:SendRawEmail",
-              Condition: {
-                StringEquals: {
-                  "ses:FromAddress": emailAddress,
-                },
+    Template.fromStack(stack).hasResourceProperties("AWS::IAM::Policy", {
+      PolicyDocument: {
+        Statement: [
+          {
+            Action: "ses:SendRawEmail",
+            Condition: {
+              StringEquals: {
+                "ses:FromAddress": emailAddress,
               },
-              Effect: "Allow",
-              Resource: stringLike(`*${domainName}`),
             },
-          ],
-        },
-      })
-    );
+            Effect: "Allow",
+            Resource: Match.stringLikeRegexp(`.*${domainName}`),
+          },
+        ],
+      },
+    });
   });
 
   test("provides a validation error if an invalid email address is supplied", () => {
     // Arrange
-    const stack = new cdk.Stack();
+    const stack = new Stack();
 
     // Act, Assert
     expect(() => {
@@ -71,7 +63,7 @@ describe("SmtpCredentials", () => {
 
   test("creates a parameter containing the SMTP credentials", () => {
     // Arrange
-    const stack = new cdk.Stack();
+    const stack = new Stack();
 
     // Act
     new SmtpCredentials(stack, "SmtpCredentials", {
@@ -79,15 +71,16 @@ describe("SmtpCredentials", () => {
     });
 
     // Assert
-    expectCDK(stack).to(
-      haveResourceLike("AWS::SSM::Parameter", {
-        Type: "String",
-        Value: {
-          "Fn::Join": arrayWith(
-            arrayWith(stringLike("*AccessKey*"), stringLike("*SmtpPassword*"))
-          ),
-        },
-      })
-    );
+    Template.fromStack(stack).hasResourceProperties("AWS::SSM::Parameter", {
+      Type: "String",
+      Value: {
+        "Fn::Join": Match.arrayWith([
+          Match.arrayWith([
+            Match.stringLikeRegexp(".*AccessKey.*"),
+            Match.stringLikeRegexp(".*SmtpPassword.*"),
+          ]),
+        ]),
+      },
+    });
   });
 });
