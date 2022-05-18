@@ -14,7 +14,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     twitter: "charlesdotfish",
   },
   npmAccess: javascript.NpmAccess.PUBLIC,
-  minNodeVersion: "12.7.0",
   defaultReleaseBranch: "main",
   releaseTrigger: release.ReleaseTrigger.continuous(),
   cdkVersion: "2.24.1",
