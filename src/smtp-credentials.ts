@@ -1,6 +1,10 @@
-import * as iam from "@aws-cdk/aws-iam";
-import * as ssm from "@aws-cdk/aws-ssm";
-import * as cdk from "@aws-cdk/core";
+import {
+  aws_iam as iam,
+  aws_ssm as ssm,
+  CfnOutput,
+  CustomResource,
+} from "aws-cdk-lib";
+import { Construct } from "constructs";
 
 import { SmtpCredentialsProvider } from "./smtp-credentials-provider";
 
@@ -29,7 +33,7 @@ export interface SmtpCredentialsProps {
  *     emailAddress: 'me@charles.fish',
  * });
  */
-export class SmtpCredentials extends cdk.Construct {
+export class SmtpCredentials extends Construct {
   /**
    * @param scope A reference to the stack which this construct will be created in. Note that the
    * SMTP credentials generated will only be permitted to send emails in this stack's region.
@@ -39,7 +43,7 @@ export class SmtpCredentials extends cdk.Construct {
    * @param props Configuration defining how this construct should be created.
    */
   public constructor(
-    scope: cdk.Construct,
+    scope: Construct,
     id: string,
     props: SmtpCredentialsProps
   ) {
@@ -54,7 +58,7 @@ export class SmtpCredentials extends cdk.Construct {
       userName
     );
 
-    new cdk.CfnOutput(this, "SmtpCredentialsParameterName", {
+    new CfnOutput(this, "SmtpCredentialsParameterName", {
       value: new ssm.StringParameter(this, "SmtpCredentials", {
         stringValue: JSON.stringify({
           AccessKey: accessKey,
@@ -102,7 +106,7 @@ export class SmtpCredentials extends cdk.Construct {
       "SmtpCredentialsProvider",
       { userArn }
     );
-    const credentials = new cdk.CustomResource(this, "SmtpCredentialsLambda", {
+    const credentials = new CustomResource(this, "SmtpCredentialsLambda", {
       serviceToken,
       properties: {
         UserName: userName,

@@ -1,19 +1,21 @@
 import * as path from "path";
-import * as iam from "@aws-cdk/aws-iam";
-import * as lambda from "@aws-cdk/aws-lambda";
-import * as logs from "@aws-cdk/aws-logs";
-import * as cdk from "@aws-cdk/core";
-import * as cr from "@aws-cdk/custom-resources";
+import {
+  aws_iam as iam,
+  aws_lambda as lambda,
+  aws_logs as logs,
+  custom_resources as cr,
+} from "aws-cdk-lib";
+import { Construct } from "constructs";
 
 interface SmtpCredentialsProviderProps {
   userArn: string;
 }
 
-export class SmtpCredentialsProvider extends cdk.Construct {
+export class SmtpCredentialsProvider extends Construct {
   public readonly serviceToken: string;
 
   public constructor(
-    scope: cdk.Construct,
+    scope: Construct,
     id: string,
     props: SmtpCredentialsProviderProps
   ) {

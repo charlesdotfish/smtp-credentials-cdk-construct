@@ -17,15 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   minNodeVersion: "12.7.0",
   defaultReleaseBranch: "main",
   releaseTrigger: release.ReleaseTrigger.continuous(),
-  cdkVersion: "1.129.0",
-  cdkDependencies: [
-    "@aws-cdk/core",
-    "@aws-cdk/aws-iam",
-    "@aws-cdk/aws-lambda",
-    "@aws-cdk/aws-logs",
-    "@aws-cdk/custom-resources",
-    "@aws-cdk/aws-ssm",
-  ],
+  cdkVersion: "2.24.1",
   eslintOptions: {
     prettier: true,
   },
